@@ -59,11 +59,11 @@ function showSearchResults () {
             footer.classList.remove('footerBottom');
         }
     }
-    
+
     favIcon = document.querySelectorAll('.fav');
     viewCountry = document.querySelectorAll('.view');
     favIcon.forEach((e) => {e.addEventListener('click', (event) => addToFavourites(event.target.id)) });
-    viewCountry.forEach((e) => {e.addEventListener('click', (event)=> redirectToViewedCountry(event.target.id)) });
+    viewCountry.forEach((e) => {e.addEventListener('click', (event)=> redirectToViewedCountry(event.target.id, '../pages/viewCountry.html')) });
 }
 
 

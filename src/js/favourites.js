@@ -26,7 +26,7 @@ function initPage () {
             footer.classList.add('footerBottom');
         }
         viewCountry = document.querySelectorAll('.view');
-        viewCountry.forEach((e) => {e.addEventListener('click', (event) => redirectToViewedCountry(event.target.id)) });
+        viewCountry.forEach((e) => {e.addEventListener('click', (event) => redirectToViewedCountry(event.target.id, '../pages/viewCountry.html')) });
     } catch (error) {
         console.log(error);
     }
