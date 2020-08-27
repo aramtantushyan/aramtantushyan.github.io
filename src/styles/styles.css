@@ -1,0 +1,151 @@
+/*Main*/
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.75)), url(../img/bg_img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/*Main body*/
+
+.body-heading {
+    text-align: center;
+    font-size: 100px;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.main-body {
+    border:none;
+    border-radius: 5px;
+    padding: 30px;
+    background-color: #454545dc;
+    width: 270px;
+    height: auto;
+}
+
+.main-body__login {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.main-body__login label {
+    margin-bottom: 3px;
+    color: #ffffff;
+}
+
+.main-body__login input {
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    margin-bottom: 20px;
+    height: 25px;
+    font-size: 16px;
+    padding-left:5px;
+}
+
+.main-body__login_btn {
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    margin: 0;
+    height: 30px;
+    background-color:#40739e;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#login {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.main-body__login_btn:hover {
+    background-color: #101c27;
+    transition-duration: 0.3s;
+}
+
+/*Icons and other*/
+
+.login-icon {
+    position: absolute;
+    top:149px;
+    left: 90px;
+    color: white;
+}
+
+.ion-icon__eye {
+    position: absolute;
+    top: 101px;
+    left: 245px;
+    cursor: pointer;
+    color:#454545;
+}
+
+.ion-icon1_check,
+.ion-icon1_close {
+    position: absolute;
+    top:29px;
+    left: 220px;
+}
+
+.ion-icon2_check,
+.ion-icon2_close {
+    position: absolute;
+    top:101px;
+    left: 220px;
+}
+
+.ion-icon1_check,
+.ion-icon2_check {
+    display:none;
+    color: rgb(115, 230, 0);
+}
+
+.ion-icon1_close,
+.ion-icon2_close {
+    display: none;
+    color:red;
+}
+
+.error1,
+.error2 {
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 0, 0);
+    font-size: 14px;
+}
+
+.error1 {
+    top: 53px;
+}
+
+.error2 {
+    top: 125px;
+}
+
+.visible {
+    display: inline;
+}

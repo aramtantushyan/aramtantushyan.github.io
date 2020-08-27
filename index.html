@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search and get information about different countries and add your 
+    favourite ones to your list.">
+    <meta name="keywords" content="countries, fakeAPI, world">
+    <link rel="stylesheet" href="./src/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>  
+    <title>Around the world</title>
+</head>
+<body>
+    <h1 class="body-heading">Around the world</h1> 
+    <section class="main-body">
+        <div class="main-body__login">
+            <ion-icon class='ion-icon1_check' name="checkmark-outline"></ion-icon>
+            <ion-icon class='ion-icon1_close' name="close-outline"></ion-icon>
+            <label for="username">Username:</label>
+            <input type="text" id="1">
+            <p class='error1'>Password must contain at least 5 characters.</p>
+            <ion-icon class='ion-icon2_check' name="checkmark-outline"></ion-icon>
+            <ion-icon class='ion-icon2_close' name="close-outline"></ion-icon>
+            <ion-icon class='ion-icon__eye' name="eye-outline"></ion-icon>                
+            <label for="password">Password:</label>
+            <input type="password" id="2">
+            <p class='error2'>Password must contain at least 5 characters.</p>
+            <ion-icon class='login-icon' name="log-in-outline"></ion-icon>
+            <button class="main-body__login_btn" type="submit">Log In</button>
+        </div>
+    </section>
+<script type=module src="./src/js/index.js"></script>
+</body>
+</html>
