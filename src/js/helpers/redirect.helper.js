@@ -4,9 +4,9 @@ function redirectToOtherPage (url) {
     window.location.href = url;
 }
 
-function redirectToViewedCountry (country, url) {
+function redirectToViewedCountry (country) {
     setViewedCountryData(country);
-    redirectToOtherPage(url);
+    redirectToOtherPage('/Homework 19/src/pages/viewCountry.html');
 }
 
 export {redirectToOtherPage};
