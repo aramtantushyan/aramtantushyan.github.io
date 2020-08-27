@@ -6,7 +6,7 @@ function redirectToOtherPage (url) {
 
 function redirectToViewedCountry (country) {
     setViewedCountryData(country);
-    redirectToOtherPage('/src/pages/viewCountry.html');
+    redirectToOtherPage('../../pages/viewCountry.html');
 }
 
 export {redirectToOtherPage};
