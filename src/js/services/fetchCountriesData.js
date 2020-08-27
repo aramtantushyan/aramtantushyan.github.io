@@ -17,7 +17,7 @@ function createDataObj (el) {
 
 async function request (countryName, localStorageKey) {
     try {
-        const data = await doGet(`https://restcountries.eu/rest/v2/${countryName}?fields=name;capital;flag;languages;currencies;region;area;population;borders`);
+        const data = await doGet(`https://restcountries.eu/rest/v2/all`);
         const arrangedData = await data.map((element) => createDataObj(element));
         setToLocalStorage(localStorageKey, arrangedData);   
     } catch (error) {
