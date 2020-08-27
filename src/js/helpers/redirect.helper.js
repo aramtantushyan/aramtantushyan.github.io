@@ -6,7 +6,7 @@ function redirectToOtherPage (url) {
 
 function redirectToViewedCountry (country) {
     setViewedCountryData(country);
-    redirectToOtherPage('../../pages/viewCountry.html');
+    redirectToOtherPage('Homwork 19/srs/pages/viewCountry.html');
 }
 
 export {redirectToOtherPage};
