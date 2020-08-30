@@ -19,7 +19,7 @@ function request (countryName, localStorageKey) {
     doGet(`https://restcountries.eu/rest/v2/${countryName}`)
     .then(res => res.map((element) => createDataObj(element)))
     .then(res => setToLocalStorage(localStorageKey, res))
-    .catch (error => {setToLocalStorage(localStorageKey, []), console.log(error)});
+    .catch (error => {setToLocalStorage(localStorageKey, []), console.log(error, error.name, error.message, error.lineNumber, error.stack)});
 }
 
 function fetchAllCountries () {
