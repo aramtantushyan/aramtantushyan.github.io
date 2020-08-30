@@ -16,7 +16,7 @@ function createDataObj (el) {
 }
 
 function request (countryName, localStorageKey) {
-    fetch(`https://restcountries.eu/rest/v2/all`)
+    fetch(`https://restcountries.eu/rest/v2/${countryName}`)
     .then(res => res.json())
     .then(res => res.map((element) => createDataObj(element)))
     .then(res => setToLocalStorage(localStorageKey, res))
