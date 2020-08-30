@@ -17,8 +17,6 @@ const footer = document.querySelector('.footer');
 let favIcon;
 let viewCountry;
 
-const state = {};
-
 function initPage () {
     try {
         let allCountriesData = getFromLocalStorage('allCountries');
