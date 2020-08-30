@@ -16,7 +16,7 @@ function createDataObj (el) {
 }
 
 function request (countryName, localStorageKey) {
-    doGet(`https://restcountries.eu/rest/v2/${countryName}`)
+    doGet(`https://restcountries.eu/rest/v2/all`)
     .then(res => res.map((element) => createDataObj(element)))
     .then(res => setToLocalStorage(localStorageKey, res))
     .catch (error => {setToLocalStorage(localStorageKey, []), console.log(error, error.name, error.message, error.lineNumber, error.stack)});
