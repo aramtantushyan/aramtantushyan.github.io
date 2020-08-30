@@ -149,3 +149,9 @@ body {
 .visible {
     display: inline;
 }
+
+@media only screen and (max-width: 814px) {
+    .body-heading {
+        font-size: 85px;
+    }
+}
