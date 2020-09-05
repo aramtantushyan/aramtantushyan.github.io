@@ -15,12 +15,16 @@ function createDataObj (el) {
     return obj;
 }
 
-function request (countryName, localStorageKey) {
-    fetch(`https://restcountries.eu/rest/v2/${countryName}`)
-    .then(res => res.json())
-    .then(res => res.map((element) => createDataObj(element)))
-    .then(res => setToLocalStorage(localStorageKey, res))
-    .catch (error => {setToLocalStorage(localStorageKey, []), console.log(error, error.name, error.message, error.lineNumber, error.stack)});
+async function request (countryName, localStorageKey) {
+    try {
+        const response = await doGet(`https://restcountries.eu/rest/v2/${countryName}?fields=name;capital;flag;languages;currencies;region;population;area;borders`);
+        const arrangedData = response.map((element) => createDataObj(element)); 
+        setToLocalStorage(localStorageKey, arrangedData);
+        location.reload();
+    } catch (error) {
+        setToLocalStorage(localStorage, []);
+        console.log(error);
+    }
 }
 
 function fetchAllCountries () {

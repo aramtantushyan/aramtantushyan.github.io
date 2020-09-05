@@ -21,14 +21,12 @@ function initPage () {
     try {
         let allCountriesData = getFromLocalStorage('allCountries');
         if (allCountriesData && allCountriesData.length !== 0) {
+            footer.classList.remove('footerBottom');
             mainBody.innerHTML = '';
             renderCountryCards(mainBody, 'beforeend', allCountriesData);
         } else {
-            fetchAllCountries();
-            //wait some time for ferchAllCountries function to write data to local storage
-            setTimeout(() => {allCountriesData = getFromLocalStorage('allCountries');
-            renderCountryCards(mainBody, 'beforeend', allCountriesData)}, 250);
-            location.reload();   
+            footer.classList.add('footerBottom');
+            fetchAllCountries();   
         }
         favIcon = document.querySelectorAll('.fav');
         viewCountry = document.querySelectorAll('.view');
