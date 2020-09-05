@@ -20,6 +20,9 @@ async function request (countryName, localStorageKey) {
         const response = await doGet(`https://restcountries.eu/rest/v2/${countryName}?fields=name;capital;flag;languages;currencies;region;population;area;borders`);
         const arrangedData = response.map((element) => createDataObj(element)); 
         setToLocalStorage(localStorageKey, arrangedData);
+        if (countryName === 'all') {
+            location.reload();
+        }
     } catch (error) {
         setToLocalStorage(localStorage, []);
         console.log(error);
@@ -30,7 +33,6 @@ function fetchAllCountries () {
     const searchFor = 'all';
     const localStorageKey = 'allCountries';
     request(searchFor, localStorageKey);
-    location.reload();
 }
 
 function fetchCountryByName (name) {
